@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/opencagedata/leaflet-opencage-search@1.4.1/dist/css/L.Control.OpenCageData.Search.min.css" />
+
+    <script
+        src="https://cdn.jsdelivr.net/gh/opencagedata/leaflet-opencage-search@1.4.1/dist/js/L.Control.OpenCageSearch.min.js">
+    </script>
+
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/FontAwesomeCSS/CSS/all.min.css">
+
+    <title>Gazetteer</title>
+</head>
+
+<body>
+    <div>
+        <a href="" class="display-3 text-center text-info text-decoration-none d-none d-lg-block navbar-text"
+            id="spacing">G a z e t t e e r</a>
+        <br />
+        <div class="container">
+            <nav class="navbar justify-content-center">
+                <form class="form-inline " action="" method="GET" id="form">
+                    <select class="custom-select mx-1" name="q" id="selCountry" form="form">
+                        <option selected value="">Choose Country</option>
+                    </select>
+                </form>
+
+            </nav>
+        </div>
+        <div id="yourAddress" class="text-center"></div>
+    </div>
+    <span id="error-message"></span>
+
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 class="sidebar-title" id="reset"></h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#" class="fas fa-2x fa-info" id="countryInfo2"  data-toggle="tab"></a>
+                </li>
+                <br>
+                <li>
+                    <a href="#" class="fas fa-2x fa-cloud" id="weather" >
+                        
+                        <div class="weatherModal" id="weatherInfo">
+
+                        </div>
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a href="#" class="fas fa-2x fa-newspaper" id="news">
+                      
+                        <div class="newsModal" id="newsInfo">
+
+                        </div>
+                    </a>
+                
+                </li>
+                <br>
+                <li>
+                    <a href="#" class="fas fa-2x fa-head-side-mask" id="covid" >
+                        <div class="covidModal" id="covidInfo">
+
+                        </div>
+                    </a>
+                </li>
+                <br>
+               
+            </ul>
+        </nav>
+
+        <div class="container-fluid">
+            <div id="mapid">
+                <input hidden id="mouseLat" type="number">
+                <input hidden id="mouseLng" type="number">
+            </div>
+        </div>
+    </div>
+
+
+
+        <div id="coords">
+            <input hidden id="lat" type="number">
+            <input hidden id="lon" type="number">
+        </div>
+
+
+
+
+        <script src="./vendors/json/geojson.js"></script>
+        <script src="./vendors/js/jquery.min.js"></script>
+        <script src="./vendors/js/script.js"></script>
+        <script src="./vendors/js/functions.js"></script>
+        <script src="./vendors/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
